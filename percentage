@@ -1,0 +1,30 @@
+''' Easy 
+Discount Calculator 
+if amt < 1000 -> 5% discount
+if amt >= 1000 and < 5000 -> 10% discount 
+if amt >= 5000 -> 10% discount
+if amt >= 5000 -> 15% doiscount
+
+Calculate the final payable amount after applying the discount
+
+Input : single integer amount representing the total purchase value 
+Output : print the final amount after discount rounded to 2 decimal places
+
+Input : 800
+output : 760.00
+explanation : 5% of 800 = 40
+final = 800 - 40 = 760
+'''
+// code
+num = int(input())
+ans = 0
+
+if num < 1000 :
+    ans = num - (num//100 * 5)
+elif num >= 1000 and num < 5000:
+    ans = num - (num//100 * 10)
+elif num >= 5000:
+    ans = num - (num//100 *15)
+print(f"{ans:.2f}")
+    
+
